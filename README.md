@@ -5,4 +5,4 @@ Course Project 1
 
 # MIT LICENSE
 
-This software project "TreeBase" is completely owned by Siddharth Kale Sid330s with no co-authors. Other Contributers are only authorized to make branch and perform commits. Cloning and using it as own code will take Cyber Security Risks.
+This software project "TreeBase" is completely owned by Sid330s (Siddharth Kale) with no co-authors. Other Contributers are only authorized to make branch and perform commits. Cloning and using it as own code will take Cyber Security Risks.
