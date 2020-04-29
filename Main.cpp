@@ -127,9 +127,8 @@ int main()
 		cout<<"		3 : Delete Record"<<endl; 
 		cout<<"		4 : Update Record"<<endl; 
 		cout<<"		5 : View All Records"<<endl; 
-		cout<<"		6 : Records in a Range(Ascending)"<<endl; 
-		cout<<"		7 : Records in a Range(Descending)"<<endl; 
-		cout<<"		8 : Save to File"<<endl<<endl; 
+		cout<<"		6 : Records in a Range"<<endl;
+		cout<<"		7 : Save to File"<<endl<<endl; 
 		cout<<"	Enter Your Option : ";
 		cin>>ch1;
 		if (ch1 == 1){
@@ -167,10 +166,6 @@ int main()
 			n = sdll.create(s);
 			t.insert(roll_number,n);
 		}
-		else if (ch1 == 5)
-		{
-			sdll.ascending();
-		}
 		else if (ch1 == 2)
 		{
 			int r;
@@ -190,42 +185,6 @@ int main()
 			cin>>r;
 			t.remove(r);
 			sdll.delete_student(r);
-		}
-		else if (ch1==6)
-		{
-			int r1;
-			cout<<"Enter Starting RollNo : ";
-			cin>>r1;
-			int r2;
-			cout<<"Enter Ending RollNo : ";
-			cin>>r2;
-			cout<<endl;
-			for (int i=r1;i<=r2;i++)
-			{
-				if (t.search(i) != NULL)
-				{
-					node* found_record = t.search(i);
-					found_record->student->print();
-				}
-			}
-		}
-		else if (ch1==7)
-		{
-			int r1;
-			cout<<"Enter Starting RollNo : ";
-			cin>>r1;
-			int r2;
-			cout<<"Enter Ending RollNo : ";
-			cin>>r2;
-			cout<<endl;
-			for (int i=r2;i>=r1;i--)
-			{
-				if (t.search(i) != NULL)
-				{
-					node* found_record = t.search(i);
-					found_record->student->print();
-				}
-			}
 		}
 		else if(ch1==4)
 		{
@@ -277,7 +236,34 @@ int main()
 			n = sdll.create(s);
 			t.insert(roll_number,n);
 		}
-		else if (ch1==8)
+		else if (ch1 == 5)
+		{
+			sdll.ascending();
+		}
+		else if (ch1==6)
+		{
+			int r1;
+			cout<<"Enter Starting RollNo : ";
+			cin>>r1;
+			int r2;
+			cout<<"Enter Ending RollNo : ";
+			cin>>r2;
+			if (r1>r2) {
+				r1 = r1+r2;
+				r2 = r1 - r2;
+				r1 = r1 - r2;
+			}
+			cout<<endl;
+			for (int i=r1;i<=r2;i++)
+			{
+				if (t.search(i) != NULL)
+				{
+					node* found_record = t.search(i);
+					found_record->student->print();
+				}
+			}
+		}
+		else if (ch1==7)
 		{
 			ofstream fout("student_data.txt");
 			fout<<order_of_btree<<endl;
