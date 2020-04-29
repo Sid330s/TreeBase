@@ -22,9 +22,11 @@ int main()
 	BTree t;
 	Sorted_Doubly_Linked_List sdll;
 	int ch1;
+	cout<<"      <---------------    CSE_SY_B : Group 2    -------------->    \n\n";
 	cout<<"	     <---------   DataStructures || Course Project    ------->    \n\n";
-	cout<<"	     <---------   TreeBase   ------->    \n\n";
-	cout<<"1 ) Load Database from an existing file\n2 ) Create a new Database\n\nEnter Option : ";
+	cout<<"	     <---------------------   TreeBase   -------------------->    \n\n";
+	cout<<"                1 : Load Database from an existing file            \n\n";
+	cout<<"                2 : Create a new Database\n\nEnter Option :        \n\n";
 	cin>>ch1;
 	if (ch1 == 1)
 	{
@@ -76,7 +78,7 @@ int main()
 		int choice = 1;
 		while (choice == 1)
 		{
-			cout<<"RollNo Name Surname subject1 grade1 subject2 grade2 subject3 grade3 subject4 grade4\n";
+			cout<<"RollNo Name Surname Subject1 Grade1 Subject2 Grade2 Subject3 Grade3 Subject4 Grade4\n";
 			cout<<"Enter the record in the above mentioned format : \n";
 
 			char inputarr[200];
@@ -119,12 +121,20 @@ int main()
 	}
 	while (true)
 	{
-		cout<<"	     <---------   Operations    ------->    \n\n";
-		cout<<"1 ) Create Record \n2 ) Read Record \n3 ) Delete Record\n4 ) Update Record \n5 ) View All Records\n6 ) Records in a Range(Ascending) \n7 ) Records in a Range(Descending)\n8 ) Save to File \n\nEnter Option : ";
+		cout<<"	     <---------   Operations    ------->    \n\n"; 
+		cout<<"		1 : Create Record"<<endl; 
+		cout<<"		2 : Read Record"<<endl; 
+		cout<<"		3 : Delete Record"<<endl; 
+		cout<<"		4 : Update Record"<<endl; 
+		cout<<"		5 : View All Records"<<endl; 
+		cout<<"		6 : Records in a Range(Ascending)"<<endl; 
+		cout<<"		7 : Records in a Range(Descending)"<<endl; 
+		cout<<"		8 : Save to File"<<endl<<endl; 
+		cout<<"	Enter Your Option : ";
 		cin>>ch1;
 		if (ch1 == 1){
 
-			cout<<"RollNo Name Surname subject1 grade1 subject2 grade2 subject3 grade3 subject4 grade4\n";
+			cout<<"RollNo Name Surname Subject1 Grade1 Subject2 Grade2 Subject3 Grade3 Subject4 Grade4\n";
 			cout<<"Enter the record in the above mentioned format : \n";
 			char inputarr[200];
 			int index = 0;
@@ -216,9 +226,6 @@ int main()
 					found_record->student->print();
 				}
 			}
-
-
-
 		}
 		else if(ch1==4)
 		{
@@ -269,10 +276,7 @@ int main()
 
 			n = sdll.create(s);
 			t.insert(roll_number,n);
-
-
 		}
-
 		else if (ch1==8)
 		{
 			ofstream fout("student_data.txt");
@@ -295,9 +299,6 @@ int main()
 			cout<<"Wrong Option Selected \n";
 		}
 	}
-
-
 	cout<<endl;
-
 	return 0;
 }
