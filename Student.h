@@ -3,11 +3,9 @@
 #include <string>
 #include "Taken_Course.h"
 using namespace std;
-class Student
-{
-	int roll_number;
-	
 
+class Student {
+	int roll_number;
 public:
 	string name;
 	vector<Taken_Course*> courses_taken;
@@ -16,4 +14,3 @@ public:
 	Student(int,string,vector<Taken_Course*>);
 	~Student(void);
 };
-
