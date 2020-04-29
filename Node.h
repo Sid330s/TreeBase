@@ -1,8 +1,7 @@
 #pragma once
 #include "Student.h"
 
-struct node
-{
+struct node {
 	node *next;
 	node *prev;
 	Student * student;
