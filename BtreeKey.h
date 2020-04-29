@@ -1,7 +1,7 @@
 #pragma once
 #include "Node.h"
-struct BtreeKey
-{
+
+struct BtreeKey {
 	int roll_no;
 	node* record;
 };
