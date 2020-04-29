@@ -1,10 +1,10 @@
 #pragma once
 #include "Student.h"
 #include "node.h"
-class Sorted_Doubly_Linked_List
-{
+
+class Sorted_Doubly_Linked_List {
 	int c;
-public:
+	public:
 	node *head ;
 	node *tail ; 
 	node *p ;
@@ -18,4 +18,3 @@ public:
 	void deleteNode(struct node **head_ref, struct node *del);
 	void delete_student(int roll);
 };
-
