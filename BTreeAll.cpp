@@ -50,9 +50,7 @@ void BTree::remove(int k) {
 		cout << "The tree is empty\n";
 		return;
 	}
-
 	root->remove(k);
-
 	if (root->n==0) {
 		BTreeNode *tmp = root;
 		if (root->leaf) root = NULL;
