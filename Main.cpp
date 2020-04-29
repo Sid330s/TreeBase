@@ -22,7 +22,8 @@ int main()
 	BTree t;
 	Sorted_Doubly_Linked_List sdll;
 	int ch1;
-	cout<<"	     <---------   DataBase System    ------->    \n\n";
+	cout<<"	     <---------   DataStructures || Course Project    ------->    \n\n";
+	cout<<"	     <---------   TreeBase   ------->    \n\n";
 	cout<<"1 ) Load Database from an existing file\n2 ) Create a new Database\n\nEnter Option : ";
 	cin>>ch1;
 	if (ch1 == 1)
@@ -75,7 +76,7 @@ int main()
 		int choice = 1;
 		while (choice == 1)
 		{
-			cout<<"1 Siddharth Kale CS101 B- CS102 D MT110 A EE101 B-   ( Example Record )\n";
+			cout<<"RollNo Name Surname subject1 grade1 subject2 grade2 subject3 grade3 subject4 grade4\n";
 			cout<<"Enter the record in the above mentioned format : \n";
 
 			char inputarr[200];
@@ -123,7 +124,7 @@ int main()
 		cin>>ch1;
 		if (ch1 == 1){
 
-			cout<<"1 Siddharth Kale CS101 B- CS102 D MT110 A EE101 B-   ( Example Record )\n";
+			cout<<"RollNo Name Surname subject1 grade1 subject2 grade2 subject3 grade3 subject4 grade4\n";
 			cout<<"Enter the record in the above mentioned format : \n";
 			char inputarr[200];
 			int index = 0;
@@ -231,7 +232,7 @@ int main()
 				found_record->student->print();
 			}
 
-			cout<<"Siddharth Kale CS101 B- CS102 D MT110 A EE101 B-   ( Example Record )\n";
+			cout<<"RollNo Name Surname subject1 grade1 subject2 grade2 subject3 grade3 subject4 grade4\n";
 			cout<<"Enter the record in the above mentioned format : \n";
 			char inputarr[200];
 			int index = 0;
